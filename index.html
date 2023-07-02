@@ -1,254 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio website</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Portfolio" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/fa62c117c7.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Raj Shekhar</title>
+  </head>
+  <body class="light" id="top">
+    <header class="header center">
+      <h3>
+        <a href="https://rajshekhar26.github.io/cleanfolio-minimal" class="link"
+          >RS.</a
+        >
+      </h3>
 
-</head>
-<body>
-    <div id="header">
-        <div class="container">
-            <nav>
-                <img src="/images/logo.png" class="logo" alt="A">
-                <ul id="sidemenu">
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <i class="fa-solid fa-times" onclick="closemenu()"></i>
-                </ul>
-                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-            </nav>
-            <div class="header-text">
-                <h1>Hello, I'm <span>Sandipan Chatterjee</span><br>A web dev enthusiast</h1>
-            </div>
+      <nav class="nav center">
+        <ul class="nav__list center">
+          <li class="nav__list-item">
+            <a class="link link--nav" href="#projects">Projects</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="link link--nav" href="#skills">Skills</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="link link--nav" href="#contact">Contact</a>
+          </li>
+        </ul>
+
+        <button type="button" aria-label="toggle theme" class="btn btn--icon">
+          <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
+        </button>
+
+        <button
+          type="button"
+          aria-label="toggle navigation"
+          class="btn btn--icon nav__hamburger"
+        >
+          <i aria-hidden="true" class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- About -->
+      <div class="about center">
+        <h1>Hi, I am <span class="about__name">Raj Shekhar.</span></h1>
+        <h2 class="about__role">A Front end Developer.</h2>
+        <p class="about__desc">
+          Consectetur neque sed quam molestiae consectetur nesciunt sit alias
+          Vitae libero perferendis reprehenderit optio veritatis Accusantium at
+          voluptatum cumque temporibus et Explicabo iste porro quis numquam
+          distinctio Repellendus adipisci nam perferendis amet eaque hic
+          Voluptates
+        </p>
+
+        <div class="about__contact center">
+          <a href="https://example.com">
+            <span class="btn btn--outline">Resume</span>
+          </a>
+
+          <a
+            href="https://github.com/rajshekhar26"
+            aria-label="github"
+            class="link link--icon"
+          >
+            <i aria-hidden="true" class="fab fa-github"></i>
+          </a>
+
+          <a
+            href="https://linkedin.com/in/rajshekhar26"
+            aria-label="linkedin"
+            class="link link--icon"
+          >
+            <i aria-hidden="true" class="fab fa-linkedin"></i>
+          </a>
         </div>
+      </div>
+
+      <!-- Projects -->
+      <section id="projects" class="section projects">
+        <h2 class="section__title">Projects</h2>
+
+        <div class="projects__grid">
+          <div class="project">
+            <h3>Project 1</h3>
+            <p class="project__description">
+              Ipsum accusamus ea excepturi aliquid eligendi amet. Explicabo
+              sapiente debitis labore sed ipsam Mollitia repellat illum quod
+              unde beatae Quis
+            </p>
+            <ul class="project__stack">
+              <li class="project__stack-item">SASS</li>
+              <li class="project__stack-item">TypeScript</li>
+              <li class="project__stack-item">React</li>
+            </ul>
+
+            <a
+              href="https://github.com"
+              aria-label="source code"
+              class="link link--icon"
+            >
+              <i aria-hidden="true" class="fab fa-github"></i>
+            </a>
+            <a
+              href="https://example.com"
+              aria-label="live preview"
+              class="link link--icon"
+            >
+              <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+
+          <div class="project">
+            <h3>Project 2</h3>
+            <p class="project__description">
+              Ipsum accusamus ea excepturi aliquid eligendi amet. Explicabo
+              sapiente debitis labore sed ipsam Mollitia repellat illum quod
+              unde beatae Quis
+            </p>
+            <ul class="project__stack">
+              <li class="project__stack-item">SASS</li>
+              <li class="project__stack-item">TypeScript</li>
+              <li class="project__stack-item">React</li>
+            </ul>
+
+            <a
+              href="https://github.com"
+              aria-label="source code"
+              class="link link--icon"
+            >
+              <i aria-hidden="true" class="fab fa-github"></i>
+            </a>
+            <a
+              href="https://example.com"
+              aria-label="live preview"
+              class="link link--icon"
+            >
+              <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+
+          <div class="project">
+            <h3>Project 3</h3>
+            <p class="project__description">
+              Ipsum accusamus ea excepturi aliquid eligendi amet. Explicabo
+              sapiente debitis labore sed ipsam Mollitia repellat illum quod
+              unde beatae Quis
+            </p>
+            <ul class="project__stack">
+              <li class="project__stack-item">SASS</li>
+              <li class="project__stack-item">TypeScript</li>
+              <li class="project__stack-item">React</li>
+            </ul>
+
+            <a
+              href="https://github.com"
+              aria-label="source code"
+              class="link link--icon"
+            >
+              <i aria-hidden="true" class="fab fa-github"></i>
+            </a>
+            <a
+              href="https://example.com"
+              aria-label="live preview"
+              class="link link--icon"
+            >
+              <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section class="section skills" id="skills">
+        <h2 class="section__title">Skills</h2>
+        <ul class="skills__list">
+          <li class="skills__list-item btn btn--plain">HTML</li>
+          <li class="skills__list-item btn btn--plain">CSS</li>
+          <li class="skills__list-item btn btn--plain">SCSS</li>
+          <li class="skills__list-item btn btn--plain">JavaScript</li>
+          <li class="skills__list-item btn btn--plain">TypeScript</li>
+          <li class="skills__list-item btn btn--plain">React</li>
+          <li class="skills__list-item btn btn--plain">Redux</li>
+          <li class="skills__list-item btn btn--plain">Git</li>
+          <li class="skills__list-item btn btn--plain">Material UI</li>
+          <li class="skills__list-item btn btn--plain">Jest</li>
+          <li class="skills__list-item btn btn--plain">Enzyme</li>
+          <li class="skills__list-item btn btn--plain">CI/CD</li>
+        </ul>
+      </section>
+
+      <!-- Contact -->
+      <section class="section contact center" id="contact">
+        <h2 class="section__title">Contact</h2>
+        <a href="mailto:rjshekhar.official@gmail.com">
+          <span class="btn btn--outline">Email me</span>
+        </a>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a
+        href="https://github.com/rajshekhar26/cleanfolio-minimal"
+        class="link footer__link"
+      >
+        Created By Raj Shekhar
+      </a>
+    </footer>
+
+    <div class="scroll-container">
+    <div class="scroll-top">
+      <a aria-label="Scroll up" href="#top">
+        <i aria-hidden="true" class="fas fa-arrow-up"></i>
+      </a>
     </div>
-<!-- -------------------------ABOUT-------------------------- -->
-    <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="/images/pikachu.png" >
-                </div>
-                <div class="about-col-2">
-                    <h1 class="subtitle">About Me</h1>
-                    <p>I am currently pursuing Bachelors of Technology in Computer 
-                        Science & Engineering. I am a very free minded guy, always looking for to 
-                        learn and to contribute. My hobbies are Reading and Cycling. I 
-                        also love gaming, it keeps me sane during non-productive days. 
-                    </p>
-                    <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                        <p class="tab-links" onclick="opentab('education')">Education</p>
-                    </div>
-                    <div class="tab-contents active-tab" id="skills">
-                        <ul>
-                            <li><span>Ui/UX</span><br>1Design</li>
-                            <li><span>Web</span><br>Design</li>
-                            <li><span>App</span><br>Design</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="experience">
-                        <ul>
-                            <li><span>Ui/UX</span><br>2Design</li>
-                            <li><span>Web</span><br>Design</li>
-                            <li><span>App</span><br>Design</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="education">
-                        <ul>
-                            <li><span>Ui/UX</span><br>3Design</li>
-                            <li><span>Web</span><br>Design</li>
-                            <li><span>App</span><br>Design</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 
-<!-- ---------------------------services-------------------- -->
-    <div id="services">
-        <div class="container">
-            <h1 class="subtitle">My Services</h1>
-            <div class="services-list">
-                <div>
-                    <i class="fa-solid fa-code"></i>
-                    <h2>Web Design</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Esse, omnis provident ullam velit nobis quo, voluptatem 
-                        consequuntur eligendi facilis 
-                        voluptas deserunt accusamus repellendus sapiente ab quibusdam
-                         atque! Ea, quibusdam suscipit.
-                    </p>
-                    <a href="#">Learn more</a>
-                </div>
-                <div>
-                    <i class="fa-solid fa-crop-simple"></i>
-                    <h2>UI Design</h2>
-                    <p>1Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Esse, omnis provident ullam velit nobis quo, voluptatem 
-                        consequuntur eligendi facilis 
-                        voluptas deserunt accusamus repellendus sapiente ab quibusdam
-                         atque! Ea, quibusdam suscipit.
-                    </p>
-                    <a href="#">Learn more</a>
-                </div>
-                <div>
-                    <i class="fa-solid fa-crop-simple"></i>
-                    <h2>app Design</h2>
-                    <p>3Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Esse, omnis provident ullam velit nobis quo, voluptatem 
-                        consequuntur eligendi facilis 
-                        voluptas deserunt accusamus repellendus sapiente ab quibusdam
-                         atque! Ea, quibusdam suscipit.
-                    </p>
-                    <a href="#">Learn more</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- ---------------------------portfolio-------------------- -->
-
-    <div id="portfolio">
-        <div class="container">
-            <div class="subtitle">My work</div>
-            <div class="work-list">
-                <div class="work">
-                    <img src="/images/pikachu.png" alt="">
-                    <div class="layer">
-                        <h3>Social media app</h3>
-                        <p>1wertyuioplkjhgfdsa</p>
-                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                </div>
-            
-                <div class="work">
-                    <img src="/images/pikachu.png" alt="">
-                    <div class="layer">
-                        <h3>Social media app</h3>
-                        <p>2wertyuioplkjhgfdsa</p>
-                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                </div>
-
-                <div class="work">
-                    <img src="/images/pikachu.png" alt="">
-                    <div class="layer">
-                        <h3>Social media app</h3>
-                        <p>3wertyuioplkjhgfdsa</p>
-                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <a href="#" class="btn">See more</a>
-
-
-    <!-- -----------------------------Contact------------------------------- -->
-
-    <div id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                    <h1 class="subtitle">Contact Me</h1>
-                    <p><i class="fa-solid fa-paper-plane"></i>contact@example.com</p>
-                    <p><i class="fa-solid fa-square-phone"></i>0123456789</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    </div>
-                </div>
-
-                <div class="contact-right">
-                    <form name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="Your name" required>
-                        <input type="email" name="Email" placeholder="Your email" required>
-                        <textarea name="Message" rows="6" placeholder="Your message"></textarea>
-                        <button type="submit" class="btn btn2">Submit</button>
-                    </form>
-
-                    <span id="msg"></span>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="copyright">
-            <p>Made with  <i class="fa-solid fa-mug-hot"></i> by Sandipan</p>
-        </div>
-
-
-
-
-
-    </div>
-
-    <script>
-
-        var tabLinks = document.getElementsByClassName("tab-links");
-        var tabContents = document.getElementsByClassName("tab-contents");
-        function opentab(tabname){
-            for(tabLinks of tabLinks){
-                tabLinks.classList.remove("active-link");
-            }
-            for(tabContents of tabContents){
-                tabContents.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
-        }
-
-    </script>
-
-
-<script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbxwCa7tubKoNf-ZUrbJ04DpDUjTt4Q6qsxzsrmJVjfv1MBDBFY8MjzqrsFVOM14wV4R/exec'
-    const form = document.forms['submit-to-google-sheet']
-  
-    const msg = document.getElementById("msg");
-
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-            msg.innerHTML = "Message sent successfully"
-            setTimeout(function(){
-                msg.innerHTML = ""
-            },2000)
-            form.reset()
-        })
-        .catch(error => console.error('Error!', error.message))
-    })
-  </script>
-
-
-
-<script>
-    var sidemenu = document.getElementById("sidemenu");
-
-    function openmenu(){
-        sidemenu.style.right = "0";
-    }
-    function closemenu(){
-        sidemenu.style.right = "-200px";
-    }
-</script>
-</body>
+    <script src="./script.js"></script>
+  </body>
 </html>
