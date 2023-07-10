@@ -1,309 +1,289 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Portfolio" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <script
-      src="https://kit.fontawesome.com/fa62c117c7.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="styles.css" />
-    <title>Sandipan Chatterjee</title>
-  </head>
-  <body class="light" id="top">
-    <header class="header center">
-      <h3>
-        <a href="https://github.com/sandy3002/portfolio" class="link"
-          >SC.</a
-        >
-      </h3>
 
-      <nav class="nav center">
-        <ul class="nav__list center">
-          <li class="nav__list-item">
-            <a class="link link--nav" href="#projects">Projects</a>
-          </li>
-          <li class="nav__list-item">
-            <a class="link link--nav" href="#skills">Skills</a>
-          </li>
-          <li class="nav__list-item">
-            <a class="link link--nav" href="#contact">Contact</a>
-          </li>
-        </ul>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfolio" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/fa62c117c7.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css" />
+  <title>Sandipan Chatterjee</title>
+</head>
 
-        <button type="button" aria-label="toggle theme" class="btn btn--icon">
-          <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
-        </button>
+<body class="light" id="top">
+  <header class="header center">
+    <h3>
+      <a href="https://github.com/sandy3002/portfolio" class="link">SC.</a>
+    </h3>
 
-        <button
-          type="button"
-          aria-label="toggle navigation"
-          class="btn btn--icon nav__hamburger"
-        >
-          <i aria-hidden="true" class="fas fa-bars"></i>
-        </button>
-      </nav>
-    </header>
+    <nav class="nav center">
+      <ul class="nav__list center">
+        <li class="nav__list-item">
+          <a class="link link--nav" href="#projects">Projects</a>
+        </li>
+        <li class="nav__list-item">
+          <a class="link link--nav" href="#skills">Skills</a>
+        </li>
+        <li class="nav__list-item">
+          <a class="link link--nav" href="#contact">Contact</a>
+        </li>
+      </ul>
 
-    <main>
-      <!---------------------------------------------------------------------------------------- About ------------------------------------------->
-      <div class="about center">
-        <h1>Hi, I am <span class="about__name">Sandipan Chatterjee.</span></h1>
-        <h2 class="about__role">A Front end Developer.</h2>
-        <p class="about__desc">
-          I am a passionate developer from India. I love to code and build things.
-          I am currently pursuing my B.Tech in Computer Science & Engineering from Jalpaiguri Government Engineering College.
-          I am always looking for opportunities to learn and grow.
-        </p>
+      <button type="button" aria-label="toggle theme" class="btn btn--icon">
+        <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
+      </button>
 
-        <div class="about__contact center">
-          <a href="https://example.com">
-            <span class="btn btn--outline">Resume</span>
-          </a>
+      <button type="button" aria-label="toggle navigation" class="btn btn--icon nav__hamburger">
+        <i aria-hidden="true" class="fas fa-bars"></i>
+      </button>
+    </nav>
+  </header>
 
-          <a
-            href="https://github.com/sandy3002/"
-            aria-label="github"
-            class="link link--icon"
-          >
+  <main>
+    <!---------------------------------------------------------------------------------------- About ------------------------------------------->
+    <div class="about center">
+      <h1>Hi, I am <span class="about__name">Sandipan Chatterjee.</span></h1>
+      <h2 class="about__role">A Front end Developer.</h2>
+      <p class="about__desc">
+        I am a passionate developer from India. I love to code and build things.
+        I am currently pursuing my B.Tech in Computer Science & Engineering from Jalpaiguri Government Engineering
+        College.
+        I am always looking for opportunities to learn and grow.
+      </p>
+
+      <div class="about__contact center">
+        <a href="https://example.com">
+          <span class="btn btn--outline">Resume</span>
+        </a>
+
+        <a href="https://github.com/sandy3002/" aria-label="github" class="link link--icon">
+          <i aria-hidden="true" class="fab fa-github"></i>
+        </a>
+
+        <a href="https://www.linkedin.com/in/sandipan-chatterjee-07112b174/" aria-label="linkedin"
+          class="link link--icon">
+          <i aria-hidden="true" class="fab fa-linkedin"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-------------------------------------------------------------------------------------- Projects -------------------------------------------------->
+    <section id="projects" class="section projects">
+      <h2 class="section__title">Projects</h2>
+
+      <div class="projects__grid">
+        <div class="project">
+          <h3>Project 1</h3>
+          <h3 id="aa">SLAY CTF</h3>
+          <p class="project__description">
+            Slay CTF is the place for cyber security enthusiasts to level up their skills.
+          </p>
+          <ul class="project__stack">
+            <li class="project__stack-item">HTML</li>
+            <li class="project__stack-item">CSS</li>
+            <li class="project__stack-item">JavaScript</li>
+          </ul>
+
+          <a href="https://github.com/sandy3002/slay-ctf" aria-label="source code" class="link link--icon">
             <i aria-hidden="true" class="fab fa-github"></i>
           </a>
+          <a href="https://slay-ctf.vercel.app/" aria-label="live preview" class="link link--icon">
+            <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+          </a>
+        </div>
 
-          <a
-            href="https://www.linkedin.com/in/sandipan-chatterjee-07112b174/"
-            aria-label="linkedin"
-            class="link link--icon"
-          >
-            <i aria-hidden="true" class="fab fa-linkedin"></i>
+        <div class="project">
+          <h3>Project 2</h3>
+          <h3 id="aa">Super Tiny Icons</h3>
+          <p class="project__description">
+            Super Tiny Icons are miniscule SVG versions of your favourite website and app logos, under 1KB each!
+          </p>
+          <ul class="project__stack">
+            <li class="project__stack-item">JavaScript</li>
+            <li class="project__stack-item">SVG</li>
+          </ul>
+
+          <a href="https://github.com/sandy3002/SuperTinyIcons/tree/master" aria-label="source code"
+            class="link link--icon">
+            <i aria-hidden="true" class="fab fa-github"></i>
+          </a>
+          <a href="https://github.com/sandy3002/SuperTinyIcons/blob/master/images/reference/index.md"
+            aria-label="live preview" class="link link--icon">
+            <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+          </a>
+        </div>
+
+        <div class="project">
+          <h3>Project 3</h3>
+          <h3 id="aa">Calculator App</h3>
+          <p class="project__description">
+            It is a calculator app made with the ReactJS library.
+          </p>
+          <ul class="project__stack">
+            <li class="project__stack-item">React</li>
+            <li class="project__stack-item">CSS</li>
+          </ul>
+
+          <a href="https://github.com/sandy3002/react-calculator" aria-label="source code" class="link link--icon">
+            <i aria-hidden="true" class="fab fa-github"></i>
+          </a>
+          <a href="https://react-calculator.sandipan3002.vercel.app/" aria-label="live preview" class="link link--icon">
+            <i aria-hidden="true" class="fas fa-external-link-alt"></i>
           </a>
         </div>
       </div>
+    </section>
+    <section id="projects" class="section projects">
+      <div class="projects__grid">
+        <div class="project">
+          <h3>Project 4</h3>
+          <h3 id="aa">Random Color Generator</h3>
+          <p class="project__description">
+            It generates random color along with it's hex code.
+          </p>
+          <ul class="project__stack">
+            <li class="project__stack-item">HTML</li>
+            <li class="project__stack-item">CSS</li>
+            <li class="project__stack-item">JavaScript</li>
+          </ul>
 
-      <!-------------------------------------------------------------------------------------- Projects -------------------------------------------------->
-      <section id="projects" class="section projects">
-        <h2 class="section__title">Projects</h2>
-
-        <div class="projects__grid">
-          <div class="project">
-            <h3>Project 1</h3>
-            <h3 id="aa">SLAY CTF</h3>
-            <p class="project__description">
-              Slay CTF is the place for cyber security enthusiasts to level up their skills.
-            </p>
-            <ul class="project__stack">
-              <li class="project__stack-item">HTML</li>
-              <li class="project__stack-item">CSS</li>
-              <li class="project__stack-item">JavaScript</li>
-            </ul>
-
-            <a
-              href="https://github.com/sandy3002/slay-ctf"
-              aria-label="source code"
-              class="link link--icon"
-            >
-              <i aria-hidden="true" class="fab fa-github"></i>
-            </a>
-            <a
-              href="https://slay-ctf.vercel.app/"
-              aria-label="live preview"
-              class="link link--icon"
-            >
-              <i aria-hidden="true" class="fas fa-external-link-alt"></i>
-            </a>
-          </div>
-
-          <div class="project">
-            <h3>Project 2</h3>
-            <h3 id="aa">Super Tiny Icons</h3>
-            <p class="project__description">
-              Super Tiny Icons are miniscule SVG versions of your favourite website and app logos, under 1KB each!
-            </p>
-            <ul class="project__stack">
-              <li class="project__stack-item">JavaScript</li>
-              <li class="project__stack-item">SVG</li>
-            </ul>
-
-            <a
-              href="https://github.com/sandy3002/SuperTinyIcons/tree/master"
-              aria-label="source code"
-              class="link link--icon"
-            >
-              <i aria-hidden="true" class="fab fa-github"></i>
-            </a>
-            <a
-              href="https://github.com/sandy3002/SuperTinyIcons/blob/master/images/reference/index.md"
-              aria-label="live preview"
-              class="link link--icon"
-            >
-              <i aria-hidden="true" class="fas fa-external-link-alt"></i>
-            </a>
-          </div>
-
-          <div class="project">
-            <h3>Project 3</h3>
-            <h3 id="aa">Calculator App</h3>
-            <p class="project__description">
-              It is a calculator app made with the ReactJS library.
-            </p>
-            <ul class="project__stack">
-              <li class="project__stack-item">React</li>
-              <li class="project__stack-item">CSS</li>
-            </ul>
-
-            <a
-              href="https://github.com/sandy3002/react-calculator"
-              aria-label="source code"
-              class="link link--icon"
-            >
-              <i aria-hidden="true" class="fab fa-github"></i>
-            </a>
-            <a
-              href="https://react-calculator.sandipan3002.vercel.app/"
-              aria-label="live preview"
-              class="link link--icon"
-            >
-              <i aria-hidden="true" class="fas fa-external-link-alt"></i>
-            </a>
-          </div>
+          <a href="https://github.com/sandy3002/random-color-generator" aria-label="source code"
+            class="link link--icon">
+            <i aria-hidden="true" class="fab fa-github"></i>
+          </a>
+          <a href="https://color-generator-random.vercel.app/" aria-label="live preview" class="link link--icon">
+            <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+          </a>
         </div>
-      </section>
-      <section id="projects" class="section projects">
-        <div class="projects__grid">
-          <div class="project">
-            <h3>Project 4</h3>
-            <h3 id="aa">Random Color Generator</h3>
-            <p class="project__description">
-              It generates random color along with it's hex code.
-            </p>
-            <ul class="project__stack">
-              <li class="project__stack-item">HTML</li>
-              <li class="project__stack-item">CSS</li>
-              <li class="project__stack-item">JavaScript</li>
-            </ul>
 
-            <a
-              href="https://github.com/sandy3002/random-color-generator"
-              aria-label="source code"
-              class="link link--icon"
-            >
-              <i aria-hidden="true" class="fab fa-github"></i>
-            </a>
-            <a
-              href="https://color-generator-random.vercel.app/"
-              aria-label="live preview"
-              class="link link--icon"
-            >
-              <i aria-hidden="true" class="fas fa-external-link-alt"></i>
-            </a>
-          </div>
+        <div class="project">
+          <h3>Project 5</h3>
+          <h3 id="aa">Multiplication Quiz</h3>
+          <p class="project__description">
+            Multiplication Quiz is a web app to hone your math skill. Test your brain now.
+          </p>
+          <ul class="project__stack">
+            <li class="project__stack-item">HTML</li>
+            <li class="project__stack-item">CSS</li>
+            <li class="project__stack-item">JavaScript</li>
+          </ul>
 
-          <div class="project">
-            <h3>Project 5</h3>
-            <h3 id="aa">Multiplication Quiz</h3>
-            <p class="project__description">
-              Multiplication Quiz is a web app to hone your math skill. Test your brain now.
-            </p>
-            <ul class="project__stack">
-              <li class="project__stack-item">HTML</li>
-              <li class="project__stack-item">CSS</li>
-              <li class="project__stack-item">JavaScript</li>
-            </ul>
-
-            <a
-              href="https://github.com/sandy3002/multiplication-quiz"
-              aria-label="source code"
-              class="link link--icon"
-            >
-              <i aria-hidden="true" class="fab fa-github"></i>
-            </a>
-            <a
-              href="https://multiplication-quiz.vercel.app/"
-              aria-label="live preview"
-              class="link link--icon"
-            >
-              <i aria-hidden="true" class="fas fa-external-link-alt"></i>
-            </a>
-          </div>
-
-          <div class="project">
-            <h3>Project 6</h3>
-            <h3 id="aa">Digital Clock</h3>
-            <p class="project__description">
-              It is a simple digital clock which automatically updates the time with animation.
-            </p>
-            <ul class="project__stack">
-              <li class="project__stack-item">HTML</li>
-              <li class="project__stack-item">CSS</li>
-              <li class="project__stack-item">JavaScript</li>
-            </ul>
-
-            <a
-              href="https://github.com/sandy3002/digital-clock"
-              aria-label="source code"
-              class="link link--icon"
-            >
-              <i aria-hidden="true" class="fab fa-github"></i>
-            </a>
-            <a
-              href="https://digital-animated-clock.vercel.app/"
-              aria-label="live preview"
-              class="link link--icon"
-            >
-              <i aria-hidden="true" class="fas fa-external-link-alt"></i>
-            </a>
-          </div>
+          <a href="https://github.com/sandy3002/multiplication-quiz" aria-label="source code" class="link link--icon">
+            <i aria-hidden="true" class="fab fa-github"></i>
+          </a>
+          <a href="https://multiplication-quiz.vercel.app/" aria-label="live preview" class="link link--icon">
+            <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+          </a>
         </div>
-      </section>
 
-      <!-------------------------------------------------------------------------Skills -------------------------------------------------------------->
-      <section class="section skills" id="skills">
-        <h2 class="section__title">Skills</h2>
-        <ul class="skills__list">
-          <li class="skills__list-item btn btn--plain">HTML</li>
-          <li class="skills__list-item btn btn--plain">CSS</li>
-          <li class="skills__list-item btn btn--plain">JavaScript</li>
-          <li class="skills__list-item btn btn--plain">React</li>
-          <li class="skills__list-item btn btn--plain">Git</li>
-          <li class="skills__list-item btn btn--plain">Material UI</li>
-          <li class="skills__list-item btn btn--plain">C</li>
-          <li class="skills__list-item btn btn--plain">C++</li>
-          <li class="skills__list-item btn btn--plain">Linux</li>
-        </ul>
-      </section>
+        <div class="project">
+          <h3>Project 6</h3>
+          <h3 id="aa">Digital Clock</h3>
+          <p class="project__description">
+            It is a simple digital clock which automatically updates the time with animation.
+          </p>
+          <ul class="project__stack">
+            <li class="project__stack-item">HTML</li>
+            <li class="project__stack-item">CSS</li>
+            <li class="project__stack-item">JavaScript</li>
+          </ul>
 
-      <!---------------------------------------------------------------------------- Contact ------------------------------------------------------------>
-      <section class="section contact center" id="contact">
-        <h2 class="section__title">Contact</h2>
-        <a href="mailto:sandipan3002@@gmail.com">
-          <span class="btn btn--outline">Email me</span>
-        </a>
-      </section>
-    </main>
+          <a href="https://github.com/sandy3002/digital-clock" aria-label="source code" class="link link--icon">
+            <i aria-hidden="true" class="fab fa-github"></i>
+          </a>
+          <a href="https://digital-animated-clock.vercel.app/" aria-label="live preview" class="link link--icon">
+            <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+          </a>
+        </div>
+      </div>
+    </section>
 
-    <footer class="footer">
-      <a
-        href="https://github.com/sandy3002/portfolio"
-        class="link footer__link"
-      >
-        Created By Sandipan Chatterjee
+    <!-------------------------------------------------------------------------Skills -------------------------------------------------------------->
+    <section class="section skills" id="skills">
+      <h2 class="section__title">Skills</h2>
+      <ul class="skills__list">
+        <li class="skills__list-item btn btn--plain">HTML</li>
+        <li class="skills__list-item btn btn--plain">CSS</li>
+        <li class="skills__list-item btn btn--plain">JavaScript</li>
+        <li class="skills__list-item btn btn--plain">React</li>
+        <li class="skills__list-item btn btn--plain">Git</li>
+        <li class="skills__list-item btn btn--plain">Material UI</li>
+        <li class="skills__list-item btn btn--plain">C</li>
+        <li class="skills__list-item btn btn--plain">C++</li>
+        <li class="skills__list-item btn btn--plain">Linux</li>
+      </ul>
+    </section>
+
+
+    <!-- EDUCATION SECTION -->
+		<section class="education" id="education">
+			<h2 data-value="EDUCATION" id="edu-title" class="title">EDUCATION</h2>
+			<hr />
+			<div class="edu-container">
+				<div class="edu-card">
+					<div class="edu-dot"></div>
+					<div class="invisible"></div>
+					<div class="edu-content">
+						<div class="edu-date">2021 - 2025</div>
+						<h2 id="aa">Computer Science & Engineering, B.Tech</h2>
+						<p><strong>Jalpaiguri Govt. Engineering College</strong></p>
+            <p>CGPA <span>9.01</span></p>
+					</div>
+				</div>
+				<div class="edu-card">
+					<div class="edu-dot"></div>
+					<div class="invisible"></div>
+					<div class="edu-content">
+						<div class="edu-date">2019 - 2021</div>
+						<h2 id="aa">WBCHSE, 12</h2>
+						<p><strong>Krishnagar High School</strong></p>
+						<p>Percentage <span>90.2%</span></p>
+					</div>
+				</div>
+				<div class="edu-card">
+					<div class="edu-dot"></div>
+					<div class="invisible"></div>
+					<div class="edu-content">
+						<div class="edu-date">2014-2019</div>
+						<h2 id="aa">WBBSE, 10</h2>
+						<p><strong>Krishnagar High School</strong></p>
+						<p>Percentage <span>93.4%</span></p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- EDUCATION SECTION END -->
+
+
+
+
+    <!---------------------------------------------------------------------------- Contact ------------------------------------------------------------>
+    <section class="section contact center" id="contact">
+      <h2 class="section__title">Contact</h2>
+      <a href="mailto:sandipan3002@@gmail.com">
+        <span class="btn btn--outline">Email me</span>
       </a>
-    </footer>
+    </section>
+  </main>
 
-    <div class="scroll-container">
+  <footer class="footer">
+    <a href="https://github.com/sandy3002/portfolio" class="link footer__link">
+      Created By Sandipan Chatterjee
+    </a>
+  </footer>
+
+  <div class="scroll-container">
     <div class="scroll-top">
       <a aria-label="Scroll up" href="#top">
         <i aria-hidden="true" class="fas fa-arrow-up"></i>
       </a>
     </div>
-    </div>
+  </div>
 
-    <script src="./script.js"></script>
-  </body>
+  <script src="./script.js"></script>
+</body>
+
 </html>
