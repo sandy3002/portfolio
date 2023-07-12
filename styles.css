@@ -342,7 +342,7 @@ main {
 }
 
 
-/* Education Section Style Start */
+/* --------------------------------------Education Section Style Start */
 section.education div.edu-container{
 	margin-top: 100px;
 	padding: 0px 20px;
@@ -405,7 +405,7 @@ section.education div.edu-container::before{
 	font-weight: bold;
 	color: var(--clr-primary);
 }
-/* Education Section Style End */
+/* ---------------------------Education Section Style End */
 
 
 
@@ -458,7 +458,20 @@ section.education div.edu-container::before{
     overflow: hidden;
     transition: width 0.2s ease-in-out;
   }
-
+ 
+  .edu-card:nth-child(even){
+		padding-left: 0px;
+	}
+	.edu-card:nth-child(odd){
+		padding-right: 0px;
+		text-align: left;
+	}
+	.edu-container::before{
+		left: 10px !important;
+	}
+	.edu-dot{
+		left: 2px !important;
+	}
   .display-nav-list {
     width: 100%;
   }
