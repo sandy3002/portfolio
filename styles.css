@@ -341,7 +341,6 @@ main {
   margin: 0.5em;
 }
 
-
 /* --------------------------------------Education Section Style Start */
 section.education div.edu-container{
 	margin-top: 100px;
@@ -440,8 +439,11 @@ section.education div.edu-container::before{
 @media (max-width: 600px) {
   .header {
     height: 6em;
+    margin-left: 0;
   }
-
+.d{
+  left: 15px;
+}
   .section {
     margin-top: 4em;
   }
