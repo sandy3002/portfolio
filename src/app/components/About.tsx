@@ -6,16 +6,11 @@ import aboutImage from '@/app/images/image.png';
 export default function About() {
   useEffect(() => {}, []);
   return (
-    <section id="about" className="py-20 bg-surface">
+    <section id="about" className="py-20 bg-surface snap-start">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <Image
-              width={500}
-              height={300}
-              src={aboutImage}
-              alt="About Me"
-            />
+            <Image width={500} height={300} src={aboutImage} alt="About Me" />
           </div>
           <div>
             <h2 className="text-3xl font-bold mb-4">About Me</h2>

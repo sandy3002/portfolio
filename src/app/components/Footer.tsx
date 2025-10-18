@@ -1,14 +1,14 @@
 'use client';
 
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { useEffect } from 'react';
 
 export default function Footer() {
 
 const socialLinks = [
-  { name: 'GitHub', icon: <FaGithub size={24} />, url: '#' },
-  { name: 'LinkedIn', icon: <FaLinkedin size={24} />, url: '#' },
-  { name: 'Twitter', icon: <FaTwitter size={24} />, url: '#' },
+  { name: 'GitHub', icon: <FaGithub size={24} />, url: 'https://github.com/sandy3002' },
+  { name: 'LinkedIn', icon: <FaLinkedin size={24} />, url: 'https://www.linkedin.com/in/sandipan-chatterjee-jgec/' },
+  { name: 'Email', icon: <FaEnvelope size={24} />, url: 'mailto:sandipan3002@gmail.com' },
 ];
 
   useEffect(() => {}, []);
@@ -17,7 +17,7 @@ const socialLinks = [
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <p className="text-center md:text-left mb-4 md:mb-0 text-muted">
-            &copy; {new Date().getFullYear()} [Your Name]. All rights reserved.
+            &copy; {new Date().getFullYear()} Sandipan. All rights reserved.
           </p>
           <div className="flex space-x-4">
             {socialLinks.map((link) => (

@@ -1,9 +1,9 @@
 'use client';
 
 import Image from 'next/image';
+import { StaticImageData } from 'next/image';
 import iitm from '@/app/images/iitm.png';
 import prismforce from '@/app/images/prismforce.png';
-import { StaticImageData } from 'next/image';
 
 type ExperienceEntry = {
   id: string;
@@ -43,7 +43,7 @@ const experienceData: ExperienceEntry[] = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-20 bg-surface">
+    <section id="experience" className="py-20 bg-surface snap-start">
       <div className="container mx-auto px-4">
         <h2 className="font-bold text-center mb-12 text-3xl">Experience</h2>
 
@@ -55,7 +55,7 @@ export default function Experience() {
               aria-labelledby={`exp-${exp.id}-title`}
             >
               <div className="flex-shrink-0">
-                <div className="p-3 rounded-full bg-white border border-gray-100 shadow-2xl text-on-accent">
+                <div className="p-3 rounded-full bg-white border border-gray-200 shadow-xl text-on-accent">
                   <Image
                     src={exp.logo}
                     alt="Prismforce"
