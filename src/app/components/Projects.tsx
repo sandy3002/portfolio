@@ -1,5 +1,4 @@
 'use client';
-import { FiCheck } from 'react-icons/fi';
 
 import { useEffect } from 'react';
 import {
