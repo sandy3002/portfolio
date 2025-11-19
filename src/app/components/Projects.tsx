@@ -67,7 +67,7 @@ export default function Projects() {
     },
   ];
 
-  useEffect(() => {}, []);
+  useEffect(() => { }, []);
   return (
     <section id="projects" className="py-20 bg-surface snap-start">
       <div className="container mx-auto px-4 max-w-6xl">
@@ -88,13 +88,12 @@ export default function Projects() {
                 {/* Status Badge */}
                 <div className="absolute top-4 right-4">
                   <span
-                    className={`px-3 py-1 rounded-full text-xs font-medium ${
-                      project.status === 'Live'
+                    className={`px-3 py-1 rounded-full text-xs font-medium ${project.status === 'Live'
                         ? 'bg-gray-100 text-gray-500'
                         : project.status === 'Beta'
-                        ? 'bg-gray-100 text-gray-500'
-                        : 'bg-gray-100 text-gray-500'
-                    }`}
+                          ? 'bg-gray-100 text-gray-500'
+                          : 'bg-gray-100 text-gray-500'
+                      }`}
                   >
                     {project.status}
                   </span>
@@ -166,13 +165,13 @@ export default function Projects() {
 
                 {/* Links - Fixed at bottom */}
                 <div className="flex gap-4 pt-4 border-t border-gray-100 mt-auto">
-                    <a
+                  <a
                     href={project.liveUrl}
                     className="flex items-center gap-2 text-blue-600 hover:text-blue-800 font-medium transition-colors duration-500 group/link"
                     aria-label={`View ${project.title} live demo`}
-                    >
+                  >
                     <FaExternalLinkAlt className="text-sm group-hover/link:translate-x-1 transition-transform duration-500" />
-                    </a>
+                  </a>
                   <a
                     href={project.sourceUrl}
                     className="flex items-center gap-2 text-gray-600 hover:text-gray-800 font-medium transition-colors duration-500 group/link"

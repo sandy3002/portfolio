@@ -34,7 +34,7 @@ export default function Skills() {
     { name: 'Docker', icon: <FaDocker size={48} /> },
   ];
 
-  useEffect(() => {}, []);
+  useEffect(() => { }, []);
   return (
     <section id="skills" className="py-20 bg-surface snap-start">
       <div className="container mx-auto px-4">

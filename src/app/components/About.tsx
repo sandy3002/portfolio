@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import Image from 'next/image';
 import aboutImage from '@/app/images/image.png';
 export default function About() {
-  useEffect(() => {}, []);
+  useEffect(() => { }, []);
   return (
     <section id="about" className="py-20 bg-surface snap-start">
       <div className="container mx-auto px-4">
