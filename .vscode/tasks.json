@@ -1,0 +1,12 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "append_css",
+			"type": "shell",
+			"command": "echo \"\n@keyframes blink {\n  0%, 100% { opacity: 1; }\n  50% { opacity: 0; }\n}\n.blinking-cursor {\n  animation: blink 1s step-end infinite;\n}\n\" >> src/app/globals.css",
+			"args": [],
+			"group": "none"
+		}
+	]
+}

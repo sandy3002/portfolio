@@ -5,6 +5,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 
 import "./globals.css";
 import { Providers } from "./providers";
+import Cursor from "./components/Cursor";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,6 +31,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
+        <Cursor />
         <Providers>{children}</Providers>
         <Analytics />
         <SpeedInsights />

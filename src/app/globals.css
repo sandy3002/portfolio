@@ -12,7 +12,9 @@
   --font-mono: var(--font-geist-mono);
 }
 
-html, body, #__next {
+html,
+body,
+#__next {
   height: 100%;
 }
 
@@ -36,24 +38,59 @@ main {
 /* Color system variables (base color: #0F0E0E) */
 :root {
   --color-base: #0F0E0E;
-  --color-background: #ffffff; /* page background */
-  --color-surface: #ffffff; /* cards, sections */
-  --color-text: #0F0E0E; /* primary text should use base */
-  --color-muted: #6b6b6b; /* secondary text */
-  --color-accent: #111111; /* accent (slightly lighter/darker than base) */
-  --color-on-accent: #ffffff; /* text on accent */
-  --color-link: #1e90ff; /* link color */
+  --color-background: #ffffff;
+  /* page background */
+  --color-surface: #ffffff;
+  /* cards, sections */
+  --color-text: #0F0E0E;
+  /* primary text should use base */
+  --color-muted: #6b6b6b;
+  /* secondary text */
+  --color-accent: #111111;
+  /* accent (slightly lighter/darker than base) */
+  --color-on-accent: #ffffff;
+  /* text on accent */
+  --color-link: #1e90ff;
+  /* link color */
 }
 
 /* Utility classes to bridge Tailwind and CSS vars where needed */
-.bg-base { background-color: var(--color-base); }
-.bg-surface { background-color: var(--color-surface); }
-.text-base { color: var(--color-base); }
-.text-muted { color: var(--color-muted); }
-.text-on-accent { color: var(--color-on-accent); }
-.bg-accent { background-color: var(--color-accent); }
-.text-link { color: var(--color-link); }
+.bg-base {
+  background-color: var(--color-base);
+}
+
+.bg-surface {
+  background-color: var(--color-surface);
+}
+
+.text-base {
+  color: var(--color-base);
+}
+
+.text-muted {
+  color: var(--color-muted);
+}
+
+.text-on-accent {
+  color: var(--color-on-accent);
+}
+
+.bg-accent {
+  background-color: var(--color-accent);
+}
+
+.text-link {
+  color: var(--color-link);
+}
 
 html {
   scroll-behavior: smooth;
 }
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.blinking-cursor {
+  animation: blink 1s step-end infinite;
+}
+

@@ -1,5 +1,3 @@
-'use client';
-
 import Image from 'next/image';
 import { StaticImageData } from 'next/image';
 import khs from '@/app/images/khs.png';
