@@ -1,5 +1,3 @@
-'use client';
-
 import {
   FaReact,
   FaNodeJs,
@@ -16,7 +14,6 @@ import {
   SiTailwindcss,
   SiNestjs,
 } from 'react-icons/si';
-import { useEffect } from 'react';
 
 export default function Skills() {
   const skills = [
@@ -34,7 +31,6 @@ export default function Skills() {
     { name: 'Docker', icon: <FaDocker size={48} /> },
   ];
 
-  useEffect(() => { }, []);
   return (
     <section id="skills" className="py-20 bg-surface snap-start">
       <div className="container mx-auto px-4">

@@ -1,7 +1,4 @@
-'use client';
-
 import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
-import { useEffect } from 'react';
 
 export default function Footer() {
 
@@ -11,7 +8,6 @@ const socialLinks = [
   { name: 'Email', icon: <FaEnvelope size={24} />, url: 'mailto:sandipan3002@gmail.com' },
 ];
 
-  useEffect(() => {}, []);
   return (
   <footer className="bg-surface text-muted py-8">
       <div className="container mx-auto px-4">

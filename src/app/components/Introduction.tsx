@@ -14,7 +14,6 @@ export default function Introduction() {
   const [currentText, setCurrentText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTyping, setIsTyping] = useState(true);
-  const [showCursor, setShowCursor] = useState(true);
 
   useEffect(() => {
     const currentLine = lines[currentIndex];
@@ -46,14 +45,6 @@ export default function Introduction() {
     }
   }, [currentText, currentIndex, isTyping]);
 
-  // Cursor blinking effect
-  useEffect(() => {
-    const cursorInterval = setInterval(() => {
-      setShowCursor((prev) => !prev);
-    }, 500);
-    return () => clearInterval(cursorInterval);
-  }, []);
-
   return (
     <section
       id="home"
@@ -64,10 +55,7 @@ export default function Introduction() {
       </h1>
       <p className="mt-4 text-lg md:text-2xl text-muted min-h-[2rem] md:min-h-[3rem]">
         {currentText}
-        <span
-          className={`${showCursor ? 'opacity-100' : 'opacity-0'
-            } transition-opacity`}
-        >
+        <span className="blinking-cursor">
           |
         </span>
       </p>

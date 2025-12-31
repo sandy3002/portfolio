@@ -1,6 +1,3 @@
-'use client';
-
-import { useEffect } from 'react';
 import {
   FaExternalLinkAlt,
   FaGithub,
@@ -67,7 +64,6 @@ export default function Projects() {
     },
   ];
 
-  useEffect(() => { }, []);
   return (
     <section id="projects" className="py-20 bg-surface snap-start">
       <div className="container mx-auto px-4 max-w-6xl">
