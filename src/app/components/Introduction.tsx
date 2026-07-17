@@ -48,7 +48,7 @@ export default function Introduction() {
   return (
     <section
       id="home"
-      className="flex flex-col items-center justify-center min-h-screen text-center bg-surface snap-start"
+      className="flex flex-col items-center justify-center min-h-screen text-center bg-surface"
     >
       <h1 className="font-bold md:text-7xl text-base">
         Hello, I&apos;m <span className='text-blue-950'>Sandipan Chatterjee</span>

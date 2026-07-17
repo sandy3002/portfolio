@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="flex-1 h-screen overflow-y-auto snap-y snap-mandatory">
+      <main className="flex-1">
         <Introduction />
         <About />
         <Skills />

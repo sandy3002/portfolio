@@ -2,7 +2,7 @@ import Image from 'next/image';
 import aboutImage from '@/app/images/image.png';
 export default function About() {
   return (
-    <section id="about" className="py-20 bg-surface snap-start">
+    <section id="about" className="py-20 bg-surface">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>

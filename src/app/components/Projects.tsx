@@ -65,7 +65,7 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-surface snap-start">
+    <section id="projects" className="py-20 bg-surface">
       <div className="container mx-auto px-4 max-w-6xl">
         <h2 className="font-bold text-center mb-4 text-3xl">My Projects</h2>
         <p className="text-center text-muted mb-16 max-w-2xl mx-auto">
