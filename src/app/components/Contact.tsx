@@ -67,7 +67,7 @@ export default function Contact() {
     }
   };
   return (
-    <section id="contact" className="py-20 bg-surface snap-start">
+    <section id="contact" className="py-20 bg-surface">
       <div className="container mx-auto px-4">
         <h2 className="font-bold text-center mb-12 text-base">Contact Me</h2>
         <div className="max-w-lg mx-auto">

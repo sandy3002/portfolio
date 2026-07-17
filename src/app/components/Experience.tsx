@@ -41,7 +41,7 @@ const experienceData: ExperienceEntry[] = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-20 bg-surface snap-start">
+    <section id="experience" className="py-20 bg-surface">
       <div className="container mx-auto px-4">
         <h2 className="font-bold text-center mb-12 text-3xl">Experience</h2>
 

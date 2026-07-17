@@ -33,7 +33,7 @@ const educationData: EducationEntry[] = [
 
 export default function Education() {
   return (
-    <section id="education" className="py-20 bg-surface snap-start">
+    <section id="education" className="py-20 bg-surface">
       <div className="container mx-auto px-4">
         <h2 className="font-bold text-center mb-12 text-3xl">Education</h2>
 
