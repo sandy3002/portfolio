@@ -1,6 +1,7 @@
 "use client";
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useEffect, useRef } from 'react';
 
 export default function Navbar() {
@@ -34,7 +35,7 @@ export default function Navbar() {
       <div className="container mx-auto px-4">
         <nav className="flex justify-between items-center py-4">
           <Link href="/#home" className="text-2xl font-bold">
-            MyPortfolio
+            <Image src="/src/app/images/sc.jpg" alt="Logo" width={50} height={50} />
           </Link>
           <ul className="hidden md:flex items-center space-x-8">
             <li>
