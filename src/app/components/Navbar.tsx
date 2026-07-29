@@ -1,25 +1,37 @@
-"use client";
+'use client';
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import logo from '@/app/images/sc.jpg';
+
+const navItems = [
+  { href: '/#home', label: 'Cover' },
+  { href: '/#about', label: 'Who I Am' },
+  { href: '/#projects', label: 'Built' },
+  { href: '/#timeline', label: 'Along the Way' },
+  { href: '/#skills', label: 'Tools' },
+  { href: '/#life', label: 'Field Notes' },
+  { href: '/#contact', label: 'Write Me' },
+];
 
 export default function Navbar() {
   const headerRef = useRef<HTMLElement | null>(null);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     const el = headerRef.current;
     if (!el) return;
 
     const setVar = () => {
-      const height = el.offsetHeight;
-      document.documentElement.style.setProperty('--navbar-height', `${height}px`);
+      document.documentElement.style.setProperty(
+        '--navbar-height',
+        `${el.offsetHeight}px`,
+      );
     };
 
     setVar();
-
-    // Update when the header size changes (e.g., on resize or responsive changes)
-    const RO = (window as unknown as { ResizeObserver?: typeof ResizeObserver }).ResizeObserver;
+    const RO = window.ResizeObserver;
     const ro = RO ? new RO(setVar) : null;
     if (ro) ro.observe(el);
     window.addEventListener('resize', setVar);
@@ -30,52 +42,79 @@ export default function Navbar() {
     };
   }, []);
 
+  useEffect(() => {
+    document.body.style.overflow = open ? 'hidden' : '';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [open]);
+
   return (
-    <header ref={headerRef} className="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
-      <div className="container mx-auto px-4">
-        <nav className="flex justify-between items-center py-4">
-          <Link href="/#home" className="text-2xl font-bold">
-            <Image src="/src/app/images/sc.jpg" alt="Logo" width={50} height={50} />
+    <header
+      ref={headerRef}
+      className="fixed top-0 left-0 right-0 z-50 bg-paper/90 backdrop-blur-sm border-b border-rule"
+    >
+      <div className="container mx-auto px-4 max-w-5xl">
+        <nav className="flex justify-between items-center py-3">
+          <Link
+            href="/#home"
+            className="flex items-center gap-3 group"
+            onClick={() => setOpen(false)}
+          >
+            <Image
+              src={logo}
+              alt="Sandipan Chatterjee"
+              width={36}
+              height={36}
+              className="rounded-full border border-rule"
+            />
           </Link>
-          <ul className="hidden md:flex items-center space-x-8">
-            <li>
-              <Link href="/#home" className="text-gray-600 hover:text-black">
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link href="/#about" className="text-gray-600 hover:text-black">
-                About
-              </Link>
-            </li>
-            <li>
-              <Link href="/#skills" className="text-gray-600 hover:text-black">
-                Skills
-              </Link>
-            </li>
-            <li>
-              <Link href="/#experience" className="text-gray-600 hover:text-black">
-                Experience
-              </Link>
-            </li>
-            <li>
-              <Link href="/#education" className="text-gray-600 hover:text-black">
-                Education
-              </Link>
-            </li>
-            <li>
-              <Link href="/#projects" className="text-gray-600 hover:text-black">
-                Projects
-              </Link>
-            </li>
-            <li>
-              <Link href="/#contact" className="text-gray-600 hover:text-black">
-                Contact
-              </Link>
-            </li>
+
+          <ul className="hidden lg:flex items-center gap-6">
+            {navItems.map((item) => (
+              <li key={item.href}>
+                <Link
+                  href={item.href}
+                  className="font-mono text-xs tracking-[0.12em] uppercase text-muted hover:text-accent transition-colors"
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
           </ul>
+
+          <button
+            type="button"
+            className="lg:hidden font-mono text-xs tracking-[0.14em] uppercase text-ink border border-rule px-3 py-2 rounded-full hover:border-accent hover:text-accent transition-colors"
+            aria-expanded={open}
+            aria-controls="mobile-nav"
+            onClick={() => setOpen((v) => !v)}
+          >
+            {open ? 'Close' : 'Menu'}
+          </button>
         </nav>
       </div>
+
+      {open && (
+        <div
+          id="mobile-nav"
+          className="lg:hidden border-t border-rule bg-paper"
+        >
+          <ul className="container mx-auto px-4 max-w-5xl py-6 space-y-4">
+            {navItems.map((item) => (
+              <li key={item.href}>
+                <Link
+                  href={item.href}
+                  className="block font-serif text-2xl text-ink hover:text-accent transition-colors"
+                  onClick={() => setOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </header>
   );
 }

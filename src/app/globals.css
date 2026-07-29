@@ -1,15 +1,37 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  --color-paper: #f7f4ef;
+  --color-ink: #1a1917;
+  --color-muted: #6f6a63;
+  --color-rule: #d9d3c8;
+  --color-accent: #637671;
+  --color-on-accent: #f7f4ef;
+  --color-surface: #faf8f4;
+  --color-card: #ffffff;
 
-:root {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --background: var(--color-paper);
+  --foreground: var(--color-ink);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-fraunces);
+
+  --navbar-height: 4.5rem;
+}
+
+@theme inline {
+  --color-paper: var(--color-paper);
+  --color-ink: var(--color-ink);
+  --color-muted: var(--color-muted);
+  --color-rule: var(--color-rule);
+  --color-accent: var(--color-accent);
+  --color-on-accent: var(--color-on-accent);
+  --color-surface: var(--color-surface);
+  --color-card: var(--color-card);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-fraunces);
 }
 
 html,
@@ -18,79 +40,97 @@ body,
   height: 100%;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-  transition: background-color 0.5s ease;
+html {
+  scroll-behavior: smooth;
 }
 
-:root {
-  /* default navbar height fallback */
-  --navbar-height: 5rem;
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  margin: 0;
 }
 
 main {
   padding-top: var(--navbar-height);
 }
 
-/* Color system variables (base color: #0F0E0E) */
-:root {
-  --color-base: #0F0E0E;
-  --color-background: #ffffff;
-  /* page background */
-  --color-surface: #ffffff;
-  /* cards, sections */
-  --color-text: #0F0E0E;
-  /* primary text should use base */
-  --color-muted: #6b6b6b;
-  /* secondary text */
-  --color-accent: #111111;
-  /* accent (slightly lighter/darker than base) */
-  --color-on-accent: #ffffff;
-  /* text on accent */
-  --color-link: #1e90ff;
-  /* link color */
+.text-muted {
+  color: var(--color-muted);
 }
 
-/* Utility classes to bridge Tailwind and CSS vars where needed */
-.bg-base {
-  background-color: var(--color-base);
+.text-ink {
+  color: var(--color-ink);
+}
+
+.text-accent {
+  color: var(--color-accent);
+}
+
+.bg-paper {
+  background-color: var(--color-paper);
 }
 
 .bg-surface {
   background-color: var(--color-surface);
 }
 
-.text-base {
-  color: var(--color-base);
-}
-
-.text-muted {
-  color: var(--color-muted);
+.bg-accent {
+  background-color: var(--color-accent);
 }
 
 .text-on-accent {
   color: var(--color-on-accent);
 }
 
-.bg-accent {
-  background-color: var(--color-accent);
+.border-rule {
+  border-color: var(--color-rule);
 }
 
-.text-link {
-  color: var(--color-link);
+.font-serif {
+  font-family: var(--font-fraunces), Georgia, serif;
 }
 
-html {
-  scroll-behavior: smooth;
+.font-mono {
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
 }
+
+/* Soft paper grain + wash — hero atmosphere */
+.paper-atmosphere {
+  background-color: var(--color-paper);
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% 0%, rgba(47, 93, 80, 0.06), transparent 60%),
+    radial-gradient(ellipse 60% 40% at 80% 80%, rgba(26, 25, 23, 0.03), transparent 50%),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+}
+
 @keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
+
 .blinking-cursor {
   animation: blink 1s step-end infinite;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .blinking-cursor {
+    animation: none;
+  }
+}
+
+/* Hide custom cursor on touch / coarse pointers */
+@media (hover: none), (pointer: coarse) {
+  .custom-cursor {
+    display: none !important;
+  }
+}

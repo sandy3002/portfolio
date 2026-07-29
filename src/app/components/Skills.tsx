@@ -1,38 +1,41 @@
-import {
-  FaReact,
-  FaNodeJs,
-  FaDocker,
-} from 'react-icons/fa';
-import {
-  SiNextdotjs,
-  SiNestjs,
-} from 'react-icons/si';
+'use client';
+
+import { motion, useReducedMotion } from 'framer-motion';
+import { skillGroups } from '@/content/skills';
+import Section from './Section';
 
 export default function Skills() {
-  const skills = [
-    { name: 'React', icon: <FaReact size={48} /> },
-    { name: 'Next.js', icon: <SiNextdotjs size={48} /> },
-    { name: 'Nest.js', icon: <SiNestjs size={48} /> },
-    { name: 'Node.js', icon: <FaNodeJs size={48} /> },
-    { name: 'Docker', icon: <FaDocker size={48} /> },
-  ];
+  const reduceMotion = useReducedMotion();
 
   return (
-    <section id="skills" className="py-20 bg-surface">
-      <div className="container mx-auto px-4">
-        <h2 className="font-bold text-center mb-12 text-3xl">My Skills</h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-          {skills.map((skill) => (
-            <div
-              key={skill.name}
-              className="flex flex-col items-center p-5 border border-gray-200 rounded-lg shadow-sm hover:shadow-lg transition-shadow"
-            >
-              <div className="text-base">{skill.icon}</div>
-              <p className="mt-4 font-semibold text-base">{skill.name}</p>
-            </div>
-          ))}
-        </div>
+    <Section
+      id="skills"
+      chapter="05 · Tools I Carry"
+      title="The kit on the road"
+      lead="Just the tools I reach for when building and shipping."
+    >
+      <div className="grid sm:grid-cols-2 gap-10 md:gap-16">
+        {skillGroups.map((group, index) => (
+          <motion.div
+            key={group.id}
+            initial={reduceMotion ? false : { opacity: 0, y: 14 }}
+            whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-40px' }}
+            transition={{
+              duration: 0.4,
+              delay: reduceMotion ? 0 : index * 0.08,
+              ease: 'easeOut',
+            }}
+          >
+            <h3 className="font-mono text-xs uppercase tracking-[0.18em] text-accent mb-4">
+              {group.label}
+            </h3>
+            <p className="font-serif text-2xl md:text-3xl text-ink leading-relaxed">
+              {group.items.join(' · ')}
+            </p>
+          </motion.div>
+        ))}
       </div>
-    </section>
+    </Section>
   );
 }
