@@ -1,76 +1,78 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
-
-const lines = [
-  "I'm a curious engineer.",
-  'I have a keen interest in DevOps and cloud infrastructure.',
-  'I doodle my thoughts into scribbles.',
-  'I travel to collect stories and cool rocks.',
-  'I procrastinate by being productive (and doomscrolling Instagram).',
-];
+import { useEffect, useState } from "react";
+import { introLines } from "@/content/intro-lines";
+import EntryStamp from "./EntryStamp";
 
 export default function Introduction() {
-  const [currentText, setCurrentText] = useState('');
+  const [currentText, setCurrentText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTyping, setIsTyping] = useState(true);
+  const [reduceMotion, setReduceMotion] = useState(false);
 
   useEffect(() => {
-    const currentLine = lines[currentIndex];
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    setReduceMotion(mq.matches);
+    const onChange = () => setReduceMotion(mq.matches);
+    mq.addEventListener("change", onChange);
+    return () => mq.removeEventListener("change", onChange);
+  }, []);
+
+  useEffect(() => {
+    if (reduceMotion) {
+      setCurrentText(introLines[0]);
+      return;
+    }
+
+    const currentLine = introLines[currentIndex];
 
     if (isTyping) {
       if (currentText.length < currentLine.length) {
         const timeout = setTimeout(() => {
           setCurrentText(currentLine.slice(0, currentText.length + 1));
-        }, 100); // Typing speed
-        return () => clearTimeout(timeout);
-      } else {
-        // Finished typing, wait 3 seconds then start clearing
-        const timeout = setTimeout(() => {
-          setIsTyping(false);
-        }, 3000);
+        }, 90);
         return () => clearTimeout(timeout);
       }
-    } else {
-      if (currentText.length > 0) {
-        const timeout = setTimeout(() => {
-          setCurrentText(currentText.slice(0, -1));
-        }, 50); // Clearing speed
-        return () => clearTimeout(timeout);
-      } else {
-        // Finished clearing, move to next line
-        setCurrentIndex((prev) => (prev + 1) % lines.length);
-        setIsTyping(true);
-      }
+      const timeout = setTimeout(() => setIsTyping(false), 2800);
+      return () => clearTimeout(timeout);
     }
-  }, [currentText, currentIndex, isTyping]);
+
+    if (currentText.length > 0) {
+      const timeout = setTimeout(() => {
+        setCurrentText(currentText.slice(0, -1));
+      }, 40);
+      return () => clearTimeout(timeout);
+    }
+
+    setCurrentIndex((prev) => (prev + 1) % introLines.length);
+    setIsTyping(true);
+  }, [currentText, currentIndex, isTyping, reduceMotion]);
 
   return (
     <section
       id="home"
-      className="flex flex-col items-center justify-center min-h-screen text-center bg-surface"
+      className="paper-atmosphere relative flex flex-col items-center justify-center min-h-[calc(100vh-var(--navbar-height))] text-center px-4"
     >
-      <h1 className="font-bold md:text-7xl text-base">
-        Hello, I&apos;m <span className='text-blue-950'>Sandipan Chatterjee</span>
+      <EntryStamp>01 · Cover</EntryStamp>
+      <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl text-ink mt-4 tracking-tight max-w-4xl">
+        Sandipan Chatterjee
       </h1>
-      <p className="mt-4 text-lg md:text-2xl text-muted min-h-[2rem] md:min-h-[3rem]">
+      <p className="mt-6 text-lg md:text-xl text-muted min-h-[2rem] md:min-h-[2.5rem] max-w-xl">
         {currentText}
-        <span className="blinking-cursor">
-          |
-        </span>
+        {!reduceMotion && <span className="blinking-cursor text-accent">|</span>}
       </p>
       <a
-        href="#projects"
+        href="#about"
         onClick={(e) => {
-          const el = document.getElementById('projects');
+          const el = document.getElementById("about");
           if (!el) return;
           e.preventDefault();
-          el.scrollIntoView({ behavior: 'smooth' });
-          history.pushState(null, '', '#projects');
+          el.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth" });
+          history.pushState(null, "", "#about");
         }}
-        className="mt-8 px-8 py-3 text-lg font-semibold text-on-accent bg-accent rounded-full hover:brightness-90 transition-colors"
+        className="mt-10 px-7 py-3 text-sm font-mono tracking-[0.12em] uppercase text-on-accent bg-accent rounded-full hover:brightness-110 transition-[filter]"
       >
-        View my work
+        Open the journal
       </a>
     </section>
   );
